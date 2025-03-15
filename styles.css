@@ -68,7 +68,7 @@ textarea:not([rows]) {
   /* Colors */
   --blue-1: #0d192c;
   --blue-2: #15263f;
-  --blue-3: #00fff8;
+  --blue-3: rgb(0, 255, 248);
   --blue-4: #8bacd9;
   --white: #fff;
 
@@ -139,4 +139,97 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Component */
+.component {
+  padding: 1.5rem 1.5rem 2rem;
+  border-radius: 1.5rem;
+  max-width: 22rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Component Contents */
+.equilibrium {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.eth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eth-value,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 2px solid var(--blue-4);
+  padding-top: 0.75rem;
+}
+
+.creator img {
+  width: 2rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+h1 {
+  width: fit-content;
+}
+
+.main-img {
+  position: relative;
+}
+
+.main-img::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 255, 248, 0.5);
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s;
+  border-radius: 1rem;
+}
+
+.view {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+}
+
+/* Hover States */
+.creator span,
+h1 {
+  transition: color 0.25s;
+  cursor: pointer;
+}
+
+.creator span:hover,
+h1:hover {
+  color: var(--blue-3);
+}
+
+.main-img:hover::after {
+  opacity: 1;
+}
+
+.main-img:hover > .view {
+  opacity: 1;
 }
