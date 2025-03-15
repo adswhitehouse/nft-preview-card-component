@@ -62,3 +62,81 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 /* CSS Reset */
+
+/* Variables */
+:root {
+  /* Colors */
+  --blue-1: #0d192c;
+  --blue-2: #15263f;
+  --blue-3: #00fff8;
+  --blue-4: #8bacd9;
+  --white: #fff;
+
+  /* Font Sizes */
+  --fs-1: 1.375rem;
+  --fs-2: 1.125rem;
+  --fs-3: 1rem;
+
+  /* Font Weights */
+  --fw-1: 600;
+  --fw-2: 400;
+  --fw-3: 300;
+
+  /* Font */
+  --ff-primary: "Outfit", sans-serif;
+}
+
+/* Utility Classes */
+/* Colors */
+.blue-3 {
+  color: var(--blue-3);
+}
+
+.blue-4 {
+  color: var(--blue-4);
+}
+
+.white {
+  color: var(--white);
+}
+
+.blue-1-bg {
+  background-color: var(--blue-1);
+}
+
+.blue-2-bg {
+  background-color: var(--blue-2);
+}
+
+/* Text Presets */
+.text-preset-1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-1);
+}
+
+.text-preset-2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-3);
+}
+
+.text-preset-3 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-2);
+}
+
+.text-preset-4 {
+  font-size: var(--fs-3);
+  font-weight: var(--fs-1);
+}
+
+/* Font */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+/* Body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
